@@ -129,3 +129,13 @@ Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\obj\Debug\SaltyTrainer.csproj.Generat
 Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\obj\Debug\SaltyTrainer.csproj.CoreCompileInputs.cache
 Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\obj\Debug\SaltyTrainer.exe
 Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\obj\Debug\SaltyTrainer.pdb
+Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\bin\Debug\EntityFramework.dll
+Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\bin\Debug\EntityFramework.SqlServer.dll
+Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\bin\Debug\System.Data.SQLite.dll
+Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\bin\Debug\System.Data.SQLite.EF6.dll
+Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\bin\Debug\System.Data.SQLite.Linq.dll
+Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\bin\Debug\EntityFramework.xml
+Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\bin\Debug\EntityFramework.SqlServer.xml
+Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\bin\Debug\System.Data.SQLite.xml
+Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\bin\Debug\System.Data.SQLite.dll.config
+Z:\Salty Trainer\SaltyTrainer\SaltyTrainer\obj\Debug\WindowsFormsApp1.DbControl.resources

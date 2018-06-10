@@ -32,8 +32,10 @@ namespace WindowsFormsApp1
         int blueCrowdPool;
         int redStreak;
         int blueStreak;
+        bool matchmaking = false;
 
-        SQLiteConnection sql_con;
+        private SQLiteConnection sql_con;
+        private SQLiteCommand sql_cmd;
 
         public ChatAndTrainer(string uNick, string uOauth)
         {
@@ -42,6 +44,7 @@ namespace WindowsFormsApp1
             AUTH = uOauth;
 
             sql_con = new SQLiteConnection("Data Source =MatchHistory.s3db;Version=3;");
+            sql_con.Open();
         }
 
         private void onMessageReceived(object sender, OnMessageReceivedArgs e)
@@ -54,6 +57,7 @@ namespace WindowsFormsApp1
                 //new match announced
                 if(msg.StartsWith("Bets are OPEN for"))
                 {
+                    // Bets are OPEN for <charA> vs <charB>! (<Tier> Tier) (Requested by lennud) (exhibitions) www.saltybet.com
                     int rNameStart = msg.IndexOf("or") + 3;
                     int rNameLength = msg.IndexOf("vs") - rNameStart - 1;
                     int bNameStart = msg.IndexOf("vs")+ 3;
@@ -221,6 +225,21 @@ namespace WindowsFormsApp1
             {
                 ChatBox.AppendText(text);
             }
+        }
+
+        private void ExecuteQuery(string txtQuery)
+        {
+            sql_cmd = sql_con.CreateCommand();
+            sql_cmd.CommandText = txtQuery;
+            sql_cmd.ExecuteNonQuery();
+        }
+
+        private object GetValue(string val, string character)
+        {
+            sql_cmd = sql_con.CreateCommand();
+            sql_cmd.CommandText = String.Format("select {0} FROM MatchHistoryDataByChar WHERE CharName = '{1}'", val, character);
+            object returnVal = sql_cmd.ExecuteScalar();
+            return returnVal;
         }
     }
 }
